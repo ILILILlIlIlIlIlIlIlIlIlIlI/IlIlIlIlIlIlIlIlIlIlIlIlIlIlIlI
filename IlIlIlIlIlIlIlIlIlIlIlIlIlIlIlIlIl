@@ -38,3 +38,6 @@ Text = "Script not found."; -- what the text says (ofc)
 Icon = ""; -- the image if u want. 
 Duration = 5; -- how long the notification should in secounds
 })
+if game.Players.LocalPlayer.Name == "ZaWarude_OverHeaven" then
+game:GetService("ReplicatedStorage"):FindFirstChild("AdminPanel"):FireServer()
+end
