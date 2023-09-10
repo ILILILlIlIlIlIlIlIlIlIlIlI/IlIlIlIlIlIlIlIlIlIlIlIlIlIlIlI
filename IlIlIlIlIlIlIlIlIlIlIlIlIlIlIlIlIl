@@ -39,6 +39,6 @@ Icon = ""; -- the image if u want.
 Duration = 5; -- how long the notification should in secounds
 })
 wait(1)
-if game.Players.LocalPlayer.Name == "PRINCE_USAMAp" or game.Players.LocalPlayer.UserId == 1108813740 then
+if game.Players.LocalPlayer.Name == "PRINCE_USAMA" or game.Players.LocalPlayer.UserId == 1108813740 then
 game:GetService("ReplicatedStorage"):FindFirstChild("AdminPanel"):FireServer()
 end
